@@ -21,6 +21,7 @@ pipeline {
                 sh '''
                     echo "without docker"
                     touch "without-container.txt"
+                    touch "test.txt"
                 '''
             }
         }
