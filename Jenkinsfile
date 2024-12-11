@@ -10,16 +10,17 @@ pipeline {
             }
             steps {
                 sh '''
-                    echo 'with docker'
+                    echo "with docker"
                     npm --version
+                    touch "with-container.txt"
                 '''
             }
         }
         stage('without Docker') {
             steps {
                 sh '''
-                    echo 'without docker'
-                    npm --version
+                    echo "without docker"
+                    touch "without-container.txt"
                 '''
             }
         }
