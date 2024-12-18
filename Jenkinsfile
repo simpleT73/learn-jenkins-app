@@ -48,6 +48,7 @@ pipeline {
                 sh '''
                     ls -la
                     node --version
+                    ping www.github.com
                     npm install netlify-cli
                     
                 '''
