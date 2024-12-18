@@ -48,9 +48,7 @@ pipeline {
                 sh '''
                     ls -la
                     node --version
-                    ping www.github.com
-                    npm install netlify-cli --save-dev
-                    
+                    npm install netlify-cli --save-dev                   
                 '''
             }
         }
