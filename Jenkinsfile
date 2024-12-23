@@ -49,7 +49,6 @@ pipeline {
             steps {
                 sh '''
                     echo "================Deploying the project================"
-                    nmcli connection modify eth0@if4 ipv4.dns "8.8.8.8"
                     ping -c 10 8.8.8.8 ; echo $?
                     ping -c 10  registry.npmjs.org ; echo $?
                     ls -la
