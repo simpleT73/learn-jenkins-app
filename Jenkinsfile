@@ -50,7 +50,8 @@ pipeline {
                 sh '''
                     echo "================Deploying the project================"
                     ip addr
-                    ping -c 1  registry.npmjs.org ; echo $?
+                    ping -c 10 8.8.8.8 ; echo $?
+                    ping -c 10  registry.npmjs.org ; echo $?
                     ls -la
                     node --version
                     npm --version
