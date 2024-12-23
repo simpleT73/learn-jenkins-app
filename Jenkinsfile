@@ -11,6 +11,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo "================Building the project================"
                     ls -la
                     node --version
                     npm --version
@@ -31,6 +32,7 @@ pipeline {
             }
             steps{
                 sh '''
+                    echo "================Testing the project================"
                     test -f build/index.html
                     npm test
                 '''
@@ -46,6 +48,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo "================Deploying the project================"
                     ls -la
                     node --version
                     npm --version
