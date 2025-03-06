@@ -57,8 +57,7 @@ pipeline {
                     node_modules/.bin/netlify --version
                     echo "================Deploying the project================"
                     echo "Deploying to Netlify Site ID: $NETLIFY_SITE_ID"
-                    node_modules/.bin/netlify login
-                    node_modules/.bin/netlify status
+                    node_modules/.bin/netlify deploy dir build --prod --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH
                     
 
                 '''
