@@ -53,7 +53,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    npm install netlify-cli
+                    npm install netlify-cli --save-dev
                     node_modules/.bin/netlify --version
                     echo "================Deploying the project================"
                     echo "Deploying to Netlify Site ID: $NETLIFY_SITE_ID"
